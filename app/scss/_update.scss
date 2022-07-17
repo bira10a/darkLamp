@@ -1,0 +1,38 @@
+.update {
+  @include adaptiveValue("margin-bottom", 100, 30);
+  @include adaptiveValue("padding", 45, 20);
+  background-color: $accent;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include r(650) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(40);
+
+    @include r(650) {
+      margin-right: rem(10);
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 30, 24);
+    margin-bottom: rem(20);
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+  }
+}
